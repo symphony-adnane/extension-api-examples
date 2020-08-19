@@ -67,21 +67,21 @@ SYMPHONY.remote.hello().then(function(data) {
         // Bind a click event handler
         incrementButton.addEventListener("click", function(){
             count++;
-            navService.count("hello-nav", count);
+            navService.count("hello-modules", count);
         });
 
         // MODULE: Hide the main module when the "Hide Main App Module" button is clicked
         var hideButton = document.getElementById("hide");
         hideButton.addEventListener("click", function() {
             // Note that this will not close any modules opened in context of cashtags or articles since we are specifying the main app module's id
-            modulesService.hide("hello");
+            modulesService.hide("hello-modules");
         });
 
         // MODULE: Change the title of the main module when the "Change Main App Module Title" button is clicked
         var setTitleButton = document.getElementById("set-title");
         setTitleButton.addEventListener("click", function() {
             // Note that this will not change the title of any modules opened in context of cashtags or articles since we are specifying the main app module's id
-            modulesService.setTitle("hello", "New Module Title");
+            modulesService.setTitle("hello-modules", "New Module Title");
         });
 
         // LEFT NAV: Remove the left navigation item ("Removable Left Nav Item") when the "Remove Left Nav Item" button is clicked
@@ -96,7 +96,7 @@ SYMPHONY.remote.hello().then(function(data) {
         var renameLeftNavItemButton = document.getElementById("rename-left-nav-item");
         renameLeftNavItemButton.addEventListener("click", function() {
             // Note that this will not rename all left navigation items created by the application - only the one with the specified id
-            navService.rename('hello-nav', 'New Left Nav Title');
+            navService.rename('hello-modules', 'New Modules Nav Title');
         });
 
         // UI: Remove the Room UI extension button when the "Unregister Room UI Extension" button is clicked
